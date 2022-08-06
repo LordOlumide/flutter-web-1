@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'pages/home_page.dart';
-
 import 'package:google_fonts/google_fonts.dart';
+import  'layout.dart';
+
 import 'package:charts_flutter/flutter.dart';
 import 'package:data_table_2/data_table_2.dart';
 
@@ -16,11 +16,21 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return GetMaterialApp(
-      title: 'Flutter Demo',
+      title: 'Dashboard',
       theme: ThemeData(
-        primarySwatch: Colors.blue,
+        scaffoldBackgroundColor: Colors.white,
+        textTheme: GoogleFonts.mulishTextTheme(
+          Theme.of(context).textTheme
+        ).apply(
+          bodyColor: Colors.black,
+        ),
+        pageTransitionsTheme: const PageTransitionsTheme(builders: {
+          TargetPlatform.iOS: FadeUpwardsPageTransitionsBuilder(),
+          TargetPlatform.android: FadeUpwardsPageTransitionsBuilder(),
+        }),
+        primaryColor: Colors.blue,
       ),
-      home: ,
+      home: SiteLayout(),
     );
   }
 }
