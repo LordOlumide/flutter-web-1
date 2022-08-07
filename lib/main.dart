@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:google_fonts/google_fonts.dart';
-import  'layout.dart';
+import 'layout.dart';
 
 import 'package:charts_flutter/flutter.dart';
 import 'package:data_table_2/data_table_2.dart';

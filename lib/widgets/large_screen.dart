@@ -16,6 +16,14 @@ class LargeScreen extends StatelessWidget {
           flex: 5,
           child: Container(
             color: Colors.green,
+            child: const Center(
+              child: Text(
+                'Dummy text',
+                style: TextStyle(
+                  fontSize: 40,
+                ),
+              ),
+            ),
           ),
         ),
       ],
